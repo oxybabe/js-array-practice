@@ -5,27 +5,15 @@
 
 // Put your answer below -------------------------
 
-function newArray(word, num){
-    let arr= [];
-    for (let i = 0; i < num; i++) {
-        arr.push(word);
+
+function newArray(word, num){ //defining parameters of the function
+    let arr= []; //creating array
+    for (let i = 0; i < num; i++) { //for loop that creates array length of num
+        arr.push(word); //pushes the value into the array
     }
-    return arr
+    return arr; //returns the new array
 }
 //console.log(newArray("sunshine", 3));
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // -----------------------------------------------
@@ -37,17 +25,12 @@ function newArray(word, num){
 
 // Put your answer below -------------------------
 
-const arr = [1, 2, 3];
-console.log(arr)
-const reversedArr = arr.toReversed();
-console.log()
-
-
-
-
-
-
-
+function reverseArray(arr) { //passing arr through function
+  
+    const arrReverse = [...arr].reverse();   //spreads the array and then reverses, which keeps it from mutating
+    return arrReverse
+}
+//console.log(reverseArray([1, 2, 3]));
 
 
 
