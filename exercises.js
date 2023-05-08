@@ -11,7 +11,7 @@ function newArray(word, num){ //defining parameters of the function
     for (let i = 0; i < num; i++) { //for loop that creates array length of num
         arr.push(word); //pushes the value into the array
     }
-    return arr; //returns the new array
+    return arr //returns the new array
 }
 //console.log(newArray("sunshine", 3));
 
@@ -33,7 +33,6 @@ function reverseArray(arr) { //passing arr through function
 //console.log(reverseArray([1, 2, 3]));
 
 
-
 // -----------------------------------------------
 
 // ---------------------
@@ -42,8 +41,13 @@ function reverseArray(arr) { //passing arr through function
 
 // Put your answer below -------------------------
 
+function removeFalsy(arr) {
+    const result = arr.filter(Boolean);
+    return result
+}
+//console.log(removeFalsy([1, "test", undefined, null, 5]));
 
-
+//https://www.educative.io/answers/how-to-quickly-filter-out-all-falsy-values-from-an-array-in-js
 
 
 
