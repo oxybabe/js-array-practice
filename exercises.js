@@ -5,6 +5,20 @@
 
 // Put your answer below -------------------------
 
+function newArray(word, num){
+    let arr= [];
+    for (let i = 0; i < num; i++) {
+        arr.push(word);
+    }
+    return arr
+}
+//console.log(newArray("sunshine", 3));
+
+
+
+
+
+
 
 
 
@@ -22,6 +36,11 @@
 // ---------------------
 
 // Put your answer below -------------------------
+
+const arr = [1, 2, 3];
+console.log(arr)
+const reversedArr = arr.toReversed();
+console.log()
 
 
 
