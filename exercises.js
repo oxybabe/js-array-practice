@@ -5,16 +5,16 @@
 
 // Put your answer below -------------------------
 
-
-function newArray(word, num){ //defining parameters of the function
-    let arr= []; //creating array
-    for (let i = 0; i < num; i++) { //for loop that creates array length of num
-        arr.push(word); //pushes the value into the array
-    }
-    return arr //returns the new array
+function newArray(word, num) {
+  //defining parameters of the function
+  let arr = []; //creating array
+  for (let i = 0; i < num; i++) {
+    //for loop that creates array length of num
+    arr.push(word); //pushes the value into the array
+  }
+  return arr; //returns the new array
 }
 //console.log(newArray("sunshine", 3));
-
 
 // -----------------------------------------------
 
@@ -25,13 +25,13 @@ function newArray(word, num){ //defining parameters of the function
 
 // Put your answer below -------------------------
 
-function reverseArray(arr) { //passing arr through function
-  
-    const arrReverse = [...arr].reverse();   //spreads the array and then reverses, which keeps it from mutating
-    return arrReverse
+function reverseArray(arr) {
+  //passing arr through function
+
+  const arrReverse = [...arr].reverse(); //spreads the array and then reverses, which keeps it from mutating
+  return arrReverse;
 }
 //console.log(reverseArray([1, 2, 3]));
-
 
 // -----------------------------------------------
 
@@ -42,37 +42,34 @@ function reverseArray(arr) { //passing arr through function
 // Put your answer below -------------------------
 
 function removeFalsy(arr) {
-    const result = arr.filter(Boolean);
-    return result
+  const result = arr.filter(Boolean);
+  return result;
 }
 //console.log(removeFalsy([1, "test", undefined, null, 5]));
 
 //https://www.educative.io/answers/how-to-quickly-filter-out-all-falsy-values-from-an-array-in-js
 
-
-
-
-
-
-
 // -----------------------------------------------
 
 // ---------------------
-// Define a function that takes an array of nested arrays and returns an object composed of propeties equal to each nested array
+// Define a function that takes an array of nested arrays and returns an object composed of properties equal to each nested array
 // const myArray = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]];
 // returns { name: 'Charlie', color: 'brown', age: 10 };
 // ---------------------
 
 // Put your answer below -------------------------
+function arr() {
+  const obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[arr[i][0]];
+    // arr[i] //arr[i][0] returns just name //arr i is the nested array
+    // arr[i][1] returns Charlie
+    //dog['name']
+    //dog[query]
+  }
 
-
-
-
-
-
-
-
-
+  return obj;
+}
 
 // -----------------------------------------------
 
@@ -83,14 +80,11 @@ function removeFalsy(arr) {
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
-
+let arr = [];
+function removeDuplicates(arr) {
+    return [...new Set(arr)];
+}
+// console.log(removeDuplicates([1, 2, 3, 4, 5, 4]))
 
 // -----------------------------------------------
 
@@ -103,15 +97,6 @@ function removeFalsy(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
-
-
-
-
-
-
-
-
-
 
 // -----------------------------------------------
 
@@ -134,15 +119,6 @@ function removeFalsy(arr) {
 
 // Put your answer below -------------------------
 
-
-
-
-
-
-
-
-
-
 // -----------------------------------------------
 
 // ---------------------
@@ -152,14 +128,5 @@ function removeFalsy(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
-
-
-
-
-
-
-
-
-
 
 // -----------------------------------------------
