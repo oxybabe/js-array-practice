@@ -4,8 +4,9 @@
 // ---------------------
 
 // Put your answer below -------------------------
+//const myFunction = function(){} function expression, const doesn't hoist; if changed const to var, it does hoist
 
-function newArray(word, num) {
+function newArray(word, num) { //function declaration; function declarations hoist in the entirety
   //defining parameters of the function
   let arr = []; //creating array
   for (let i = 0; i < num; i++) {
@@ -16,6 +17,20 @@ function newArray(word, num) {
 }
 //console.log(newArray("sunshine", 3));
 
+//another way of doing this:
+//function myFunction(str, i) {
+  //return Array(i).fill(str);
+  //const result = [];
+//}
+// static method
+// return Array.from (
+//   {
+//     length: i,
+//   }, 
+//   function () {
+//     return structuredClone;
+//   }
+// )
 // -----------------------------------------------
 
 // ---------------------
@@ -25,11 +40,17 @@ function newArray(word, num) {
 
 // Put your answer below -------------------------
 
-function reverseArray(arr) {
+function reverseArray(arr) { //counting left to right
   //passing arr through function
 
   const arrReverse = [...arr].reverse(); //spreads the array and then reverses, which keeps it from mutating
   return arrReverse;
+
+//   const result = [];
+//   for(let i = 0; i < arr.length; i++) {
+//     result.unshift(arr[i]); // use the shift method to add to the beginning
+//   }
+//   return result;
 }
 //console.log(reverseArray([1, 2, 3]));
 
@@ -44,10 +65,26 @@ function reverseArray(arr) {
 function removeFalsy(arr) {
   const result = arr.filter(Boolean);
   return result;
+//https://www.educative.io/answers/how-to-quickly-filter-out-all-falsy-values-from-an-array-in-js
+
+  // const result = [];
+  // for(let i = 0; i < arr.length; i++) {
+  //   if(arr[i]) { if this is true, then push it into the array
+  //     result.push(arr[i]);
+  //   }
+  // }
+  // return result;
+  //(!! not operator, '1' truthy, !'1' falsey, !!'1' truthy)
 }
 //console.log(removeFalsy([1, "test", undefined, null, 5]));
 
-//https://www.educative.io/answers/how-to-quickly-filter-out-all-falsy-values-from-an-array-in-js
+// function removeFalsyValues(arr) {
+//   return arr.filter(function(el) { // filter those not mutate, filter passes into the function. If the element returns true, it will return to the array.
+//     //if it returns false, it will not return into the array.
+//     return !!el;
+//   })
+// }
+
 
 // -----------------------------------------------
 
@@ -73,8 +110,28 @@ function nestedArray(nestedArr) {
     //dog[query]
     return obj;
   }
-
-
+// function createdObj1(arr) {
+//   const result = {};
+//   for(let i = 0; i < arr.length; i++) {
+//     result[arr[i][0]] = arr[i][1]; //set the value associated with the key
+    
+//     //need to do square brackets when you need to pass a string value, to set the value use =
+//     //use square brackets to add or update the value
+//   }
+//   return result;
+// }
+// function createdObj1(arr) {
+//   const result = {};
+//   for(const index of arr) { //giving each element a variable, index is a parameter, 
+//     result[index[0]] = index[1]; 
+    
+//     //need to do square brackets when you need to pass a string value, to set the value use =
+//     //use square brackets to add or update the value
+//   }
+//   return result;
+// }
+//the keys of an object 
+// could also use object.fromEntries(myArray)
 
 // -----------------------------------------------
 
@@ -85,12 +142,26 @@ function nestedArray(nestedArr) {
 
 // Put your answer below -------------------------
 
-//remind Mady to show filter method
+
 let arr = [];
 function removeDuplicates(arr) {
-    return [...new Set(arr)];
-}
+    return [...new Set(arr)]; // creating a new set and pass it into the array (set can't have duplicates, but array can)
+} // a set is unique values and can't have duplicates
+//spreading the new set and placing it into the new array
+
+
 // console.log(removeDuplicates([1, 2, 3, 4, 5, 4]))
+
+//remind Mady to show filter method:
+function removeDuplicates(arr) {
+  return arr.filter (function (item, index) {
+return arr.indexOf(item) === index; //array index of item = index; index of is going to return first index
+  });
+}
+//forEach method
+//forEach doesn't give us a return value, it's for side effects
+//map, filter, reduce give us a return value
+//includes returns true or false (!unique.inludes(element))
 
 // -----------------------------------------------
 
@@ -104,20 +175,24 @@ function removeDuplicates(arr) {
 
 // Put your answer below -------------------------
 function compareArrays(arr1, arr2) {
-    if (arr1.length != arr2.length) {
+    if (arr1.length !== arr2.length) {
       return false 
     }
-    else {
+    arr1.sort(); //mutates
+    arr2.sort();
+
         for (let i = 0; i < arr1.length; i++) {
-          if (arr1[i] != arr2[i]) {
+          if (arr1[i] !== arr2[i]) {
+            return false;
           }
         }
         return true;
-    }
-
 }
 
-// console.log(compareArrays([1,2,3,4], [1,2,3,4]))
+return arr1.sort().join() === arr2.sort().join();//each array is their own thing, each arrays are unique
+//by adding join, it makes them into strings
+
+// console.log(compareArrays([1,2,3,4], [1,3,2,4]))
 
 
 
