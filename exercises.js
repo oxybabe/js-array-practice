@@ -58,6 +58,8 @@ function removeFalsy(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
+
+//TODO: FINISH THIS ONE
 function arr() {
   const obj = {};
   for (let i = 0; i < arr.length; i++) {
@@ -80,6 +82,7 @@ function arr() {
 
 // Put your answer below -------------------------
 
+//remind Mady to show filter method
 let arr = [];
 function removeDuplicates(arr) {
     return [...new Set(arr)];
@@ -97,6 +100,23 @@ function removeDuplicates(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
+function compareArrays(arr1, arr2) {
+    if (arr1.length != arr2.length) {
+      return false 
+    }
+    else {
+        for (let i = 0; i < arr1.length; i++) {
+          if (arr1[i] != arr2[i]) {
+          }
+        }
+        return true;
+    }
+
+}
+
+// console.log(compareArrays([1,2,3,4], [1,2,3,4]))
+
+
 
 // -----------------------------------------------
 
