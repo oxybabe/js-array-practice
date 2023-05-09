@@ -60,18 +60,21 @@ function removeFalsy(arr) {
 // Put your answer below -------------------------
 
 //TODO: FINISH THIS ONE
-function arr() {
-  const obj = {};
-  for (let i = 0; i < arr.length; i++) {
-    obj[arr[i][0]];
+function nestedArray(nestedArr) {
+  const obj = {}; 
+  for (let i = 0; i < nestedArr.length; i++) {
+
+      obj = [arr[i][0]];
+
+    }
     // arr[i] //arr[i][0] returns just name //arr i is the nested array
     // arr[i][1] returns Charlie
     //dog['name']
     //dog[query]
+    return obj;
   }
 
-  return obj;
-}
+
 
 // -----------------------------------------------
 
